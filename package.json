@@ -1,10 +1,14 @@
 {
   "name": "flim-api",
-  "version": "1.0.0-alpha-0.0.1",
+  "version": "1.0.0-alpha-0.0.2",
   "description": "api for flimjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "docs": "jsdoc index.js -t docdash -d D:\\github\\artegoser.github.io\\flim\\api-docs -r ./README.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/artegoser/flim-api.git"
   },
   "keywords": [
     "flim",
@@ -15,5 +19,8 @@
     "flimjs"
   ],
   "author": "artegoser",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
 }
