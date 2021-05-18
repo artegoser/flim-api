@@ -19,7 +19,7 @@ class API{
      */
     async getPackage(name){
         let res = await fetch(`${this.host}/package/${name}`);
-        if(res.status!==200) throw new Error(res.status+" "+res.statusText);
+        if(res.status!==200) return res.status+" "+res.statusText;
         return res.json();
     }
     /**
@@ -39,7 +39,7 @@ class API{
             }),
             headers: { 'Content-Type': 'application/json' },
         });
-        if(res.status!==200) throw new Error(res.status+" "+res.statusText);
+        if(res.status!==200) return res.status+" "+res.statusText;
         return res.json();
     }
     /**
@@ -55,7 +55,7 @@ class API{
             }),
             headers: { 'Content-Type': 'application/json' },
         });
-        if(res.status!==200) throw new Error(res.status+" "+res.statusText);
+        if(res.status!==200) return res.status+" "+res.statusText;
         return res.json();
     }
 }
