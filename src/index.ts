@@ -10,7 +10,7 @@ export class API{
     name:string;
     password:string;
     host:string;
-    constructor(name, password, host){
+    constructor(name: string, password: string, host?: string){
         this.name = name;
         this.password = password;
         this.host = host || "https://flimjs.herokuapp.com/api" //test server
