@@ -1,12 +1,15 @@
-const fetch = require("node-fetch");
+import * as fetch from "node-fetch";
 
-class API{
+export class API{
     /**
      * @constructor
      * @param {str} name name of your user in flim package index
      * @param {str} password password of your user in flim package index
      * @param {str|none} host
      */
+    name:string;
+    password:string;
+    host:string;
     constructor(name, password, host){
         this.name = name;
         this.password = password;
@@ -59,4 +62,3 @@ class API{
         return res.json();
     }
 }
-module.exports = API

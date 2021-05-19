@@ -1,8 +1,8 @@
 {
   "name": "flim-api",
-  "version": "1.0.0-alpha-0.1.0",
+  "version": "1.0.0-alpha-0.2.0",
   "description": "api for flimjs",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "docs": "jsdoc index.js -t docdash -d D:\\github\\artegoser.github.io\\flim\\api-docs -r ./README.md"
   },
