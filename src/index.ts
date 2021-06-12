@@ -1,5 +1,16 @@
 import * as fetch from "node-fetch";
 
+interface Package {
+    name: string;
+    version: string;
+    author: string;
+    type: string;
+    license: string;
+    url?: string;
+    keywords?: Array<string>;
+    filename?: string;
+}
+
 export class API{
     /**
      * @constructor
@@ -10,7 +21,7 @@ export class API{
     name:string;
     password:string;
     host:string;
-    constructor(name: string, password: string, host?: string){
+    constructor(name?: string, password?: string, host?: string){
         this.name = name;
         this.password = password;
         this.host = host || "https://flimjs.herokuapp.com/api" //test server
@@ -30,7 +41,7 @@ export class API{
      * @param {Object} pkg body of package
      * @returns response in json format
      */
-    async uploadPackage(pkg){
+    async uploadPackage(pkg:Package){
         let res = await fetch(`${this.host}/package/`, {
             method: 'post',
             body: JSON.stringify({
